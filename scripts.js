@@ -30,7 +30,7 @@ function precinctClick(num) {
     else if ((index > -1))
         precincts.splice(index, 1);
     if ((len <= 1) && (precinct_avail == num)) {
-        if (confirm('This precinct is not empty. Do you want to look for another location?')) {
+        if (confirm('This precinct is not full. Do you want to look for another location?')) {
             console.log('do nothing');
         }
         else
