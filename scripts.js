@@ -60,14 +60,17 @@ function submitFinalForm() {
     } if (document.forms["finalForm"]["city"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["gender"].value.length == 0) {
+    } if (document.forms["finalForm"]["gender"].value != "male" && document.forms["finalForm"]["gender"].value != "Male" && document.forms["finalForm"]["gender"].value != "female" && document.forms["finalForm"]["gender"].value != "Female") {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["state"].value.length == 0) {
-        document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
+    } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
+        document.getElementById("finalFormErrors").innerHTML = "Sorry, you are not eligible to vote.";
+        formValid = false;
+    } if (document.forms["finalForm"]["state"].value != "VA") {
+        document.getElementById("finalFormErrors").innerHTML = "Sorry, you are not eligible to vote.";
         formValid = false;
     } if (document.forms["finalForm"]["country"].value != 'US') {
-        document.getElementById("finalFormErrors").innerHTML = "You're not in " + document.forms["finalForm"]["country"].value + ". Please select the correct country.";
+        document.getElementById("finalFormErrors").innerHTML = "Sorry, you are not eligible to vote.";
         formValid = false;
     } if (!document.forms["finalForm"]["email"].value.includes("@")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
