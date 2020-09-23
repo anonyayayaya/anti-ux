@@ -7,6 +7,9 @@ body {
 .red {
     color: red;
 }
+.darkgray {
+    color: #505050;
+}
 #high-contrast-div {
     background-image: url('images/busy.jpg');
     min-height: 100vh;
