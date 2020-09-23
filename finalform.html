@@ -29,6 +29,16 @@
     </div>
     <form name="finalForm" onsubmit="submitFinalForm(this.form); return false;" method="post" autocomplete="off">
         <div id="high-contrast-div">
+            <input type="text" id="firstname" name="firstname" style="display:none">
+            <input type="text" id="lastname" name="lastname" style="display:none">
+            <input type="email" id="email" name="email" style="display:none">
+            <input type="phone" id="phone" name="phone" style="display:none">
+            <input type="text" id="street" name="street" style="display:none">
+            <input type="text" id="city" name="city" style="display:none">
+            <input type="text" id="state" name="state" style="display:none">
+            <input type="text" id="country" name="country" style="display:none">
+
+
             <input autocomplete="no" type="submit" name="submit" value="Submit" class="btn-lg btn-dark mx-3">
             <input autocomplete="no" class="w-100 my-5" type="text" name="prothomnam" placeholder="Enter first name">
             <input autocomplete="no" class="w-100 my-5" type="text" name="babarnam" placeholder="Enter last name">
@@ -39,7 +49,7 @@
             <input autocomplete="no" class="w-100 my-5" type="text" name="mechele" placeholder="Enter gender">
             <input autocomplete="no" class="w-100 my-5" type="text" name="mentally_incompetent" placeholder="I have not currently been declared not mentally incompetent by a court of law">
             
-            <select autocomplete="no" class="w-100 my-5" name="state">
+            <select autocomplete="no" class="w-100 my-5" name="etats">
                 <option value="">State</option>
                 <option value="ME">Maine</option>
                 <option value="AK">Alaska</option>
@@ -92,7 +102,7 @@
                 <option value="MN">Minnesota</option>
                 <option value="WI">Wisconsin</option>
             </select>
-            <select autocomplete="no" name="country" class="w-100 my-5">
+            <select autocomplete="no" name="desh" class="w-100 my-5">
                 <option value="">Country</option>
                 <option value="Burkina Faso">Burkina Faso</option>
                 <option value="Greece">Greece</option>

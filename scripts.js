@@ -176,11 +176,11 @@ function submitFinalForm() {
     } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
         document.getElementById("finalFormErrors").innerHTML = 'Please correctly answer only "yes" or "no" (no single or double quotes) to the mental competency question.';
         formValid = false;
-    } if (document.forms["finalForm"]["state"].value != "VA") {
-        document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["state"].value + " citizens are not eligible to vote in the Virginia primaries.";
+    } if (document.forms["finalForm"]["etats"].value != "VA") {
+        document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["etats"].value + " citizens are not eligible to vote in the Virginia primaries.";
         formValid = false;
-    } if (document.forms["finalForm"]["country"].value != 'US') {
-        document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["country"].value  + " citizens are not eligible to vote in the US.";
+    } if (document.forms["finalForm"]["desh"].value != 'US') {
+        document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["desh"].value  + " citizens are not eligible to vote in the US.";
         formValid = false;
     } if (!document.forms["finalForm"]["email"].value.includes("@")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
