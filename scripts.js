@@ -50,11 +50,11 @@ function submitFinalQuiz1() {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that you can vote before election day.");
         formValid = false;
     }
-    else if (!document.getElementById("q2t1").checked) {
+    if (!document.getElementById("q2t1").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    if (!document.getElementById("q2t2").checked) {
+    if (document.getElementById("q2f6").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
@@ -71,7 +71,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (document.getElementById("q2f3").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that utility bills are allowed.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that electricity and water statements are examples of utility bills.");
         formValid = false;
     }
     if (document.getElementById("q2f4").checked) {
@@ -152,25 +152,25 @@ function submitFinalQuiz4() {
 
 function submitFinalForm() {
     let formValid = true;
-    if (document.forms["finalForm"]["firstname"].value.length == 0) {
+    if (document.forms["finalForm"]["prothomnam"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["lastname"].value.length == 0) {
+    } if (document.forms["finalForm"]["babarnam"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["email"].value.length == 0) {
+    } if (document.forms["finalForm"]["cheethee"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["phone"].value.length == 0) {
+    } if (document.forms["finalForm"]["pon"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["street"].value.length == 0) {
+    } if (document.forms["finalForm"]["rasta"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["city"].value.length == 0) {
+    } if (document.forms["finalForm"]["shohor"].value.length == 0) {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
-    } if (document.forms["finalForm"]["gender"].value != "male" && document.forms["finalForm"]["gender"].value != "Male" && document.forms["finalForm"]["gender"].value != "female" && document.forms["finalForm"]["gender"].value != "Female") {
+    } if (document.forms["finalForm"]["mechele"].value != "male" && document.forms["finalForm"]["mechele"].value != "Male" && document.forms["finalForm"]["mechele"].value != "female" && document.forms["finalForm"]["mechele"].value != "Female") {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
     } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
