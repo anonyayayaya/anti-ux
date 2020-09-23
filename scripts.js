@@ -54,31 +54,31 @@ function submitFinalQuiz1() {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    else if (!document.getElementById("q2t2").checked) {
+    if (!document.getElementById("q2t2").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    else if (!document.getElementById("q2t3").checked) {
+    if (!document.getElementById("q2t3").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only IDs from US institutions are valid.");
         formValid = false;
     }
-    else if (document.getElementById("q2f1").checked) {
+    if (document.getElementById("q2f1").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    else if (document.getElementById("q2f2").checked) {
+    if (document.getElementById("q2f2").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    else if (document.getElementById("q2f3").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that utility bills include things like water and electricity.");
+    if (document.getElementById("q2f3").checked) {
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that utility bills are allowed.");
         formValid = false;
     }
-    else if (document.getElementById("q2f4").checked) {
+    if (document.getElementById("q2f4").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    else if (document.getElementById("q2f5").checked) {
+    if (document.getElementById("q2f5").checked) {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
@@ -174,7 +174,7 @@ function submitFinalForm() {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
     } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
-        document.getElementById("finalFormErrors").innerHTML = "Please correctly answer only 'yes' or 'no' to the mental competency question.";
+        document.getElementById("finalFormErrors").innerHTML = 'Please correctly answer only "yes" or "no" (no single or double quotes) to the mental competency question.';
         formValid = false;
     } if (document.forms["finalForm"]["state"].value != "VA") {
         document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["state"].value + " citizens are not eligible to vote in the Virginia primaries.";
