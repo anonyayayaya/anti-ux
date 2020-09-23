@@ -11,14 +11,27 @@
   </head>
   <body>
     <div class="container">
-        <div class="row" style="height: 100vh;">
-            <div class="col-8 my-auto mx-auto text-center">
-                <h1>
-                    Register to 
-                    <a href="registration_no.html" style="color:black; text-decoration: none; cursor: alias;">vote</a> 
-                    in the primary by clicking
-                  	<span class="fake_link">Here</span>!</span><a href="registration_no.html" style="color:black; text-decoration: none; cursor: none;">!</a>
-                </h1>
+        <div class="row">
+            <div class="col-12 mt-5 text-center">
+                <h1 class="my-5">Let's confirm that you're well informed to vote.</h1>
+                <form name="finalQuiz4" onsubmit="submitFinalQuiz4(this.form); return false;" method="post">
+                    Early voting period runs from:
+                    <br>
+                    <input type="date" id="sept18" name="sept18">
+                    <br>
+                    to
+                    <br>
+                    <input type="date" id="oct31" name="oct31">
+                    <br><br>
+                    <!-- Q1 -->
+                    Early voting runs all day from Friday, Sept 18 to Saturday, Oct 31.
+                    <input type="radio" id="q1f" name="q1" value="true">
+                    True
+                    <input type="radio" id="q1t" name="q1" value="true">
+                    False
+
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </form>
             </div>
         </div>
     </div>

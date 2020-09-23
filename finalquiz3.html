@@ -11,14 +11,25 @@
   </head>
   <body>
     <div class="container">
-        <div class="row" style="height: 100vh;">
-            <div class="col-8 my-auto mx-auto text-center">
-                <h1>
-                    Register to 
-                    <a href="registration_no.html" style="color:black; text-decoration: none; cursor: alias;">vote</a> 
-                    in the primary by clicking
-                  	<span class="fake_link">Here</span>!</span><a href="registration_no.html" style="color:black; text-decoration: none; cursor: none;">!</a>
-                </h1>
+        <div class="row">
+            <div class="col-12 mt-5 text-center">
+                <h1 class="my-5">Let's confirm that you're well informed to vote.</h1>
+                <form name="finalQuiz3" onsubmit="submitFinalQuiz3(this.form); return false;" method="post">
+                    If you didn't bring any valid form of identification, you are required to 
+                    <input type="text" id="sign" name="sign"> a <input type="text" id="statement" name="statement">
+                    that you are the <input type="text" id="registered" name="registered"> voter you claim to be.
+                    
+                    <br><br>
+                    
+                    You will have until <input type="text" id="noon" name="noon"> on the <input type="text" id="Friday" name="Friday"> following the election to deliver a copy of the ID to the 
+                    <input type="text" id="local" name="local">
+                    <input type="text" id="electoral" name="electoral">
+                    <input type="text" id="board" name="board">
+
+                    <br>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                    
+                </form>
             </div>
         </div>
     </div>

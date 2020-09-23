@@ -4,6 +4,9 @@ body {
 .black {
     color: black;
 }
+.red {
+    color: red;
+}
 #high-contrast-div {
     background-image: url('images/busy.jpg');
     min-height: 100vh;
@@ -17,5 +20,5 @@ body {
     text-decoration:underline;
 }
 #registration_code_img {
-    height: 35px;
+    height: 20px;
 }
