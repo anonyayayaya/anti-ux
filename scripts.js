@@ -141,7 +141,7 @@ function submitFinalQuiz4() {
     let formValid = true;
     if (!(document.getElementById("q1t").checked) && (document.getElementById("q1f").checked)) {
         formValid = false;
-        alert("Sorry, that's not right. Remember that The early voting period runs from Friday, September 18, 2020 to Saturday, October 31, 2020, but dates and hours may vary based on where you live.");
+        alert("Sorry, that's not right. Remember that The early voting period runs from Friday, September 18, 2020 to Saturday, October 31, 2020, but hours may vary based on where you live.");
     }
     console.log(document.getElementById("sept18").value == '2020-09-18');
     console.log(document.getElementById("oct31").value == '2020-10-31');
