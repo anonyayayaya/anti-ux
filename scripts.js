@@ -171,7 +171,7 @@ function submitFinalForm() {
         document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
         formValid = false;
     } if (document.forms["finalForm"]["mechele"].value != "male" && document.forms["finalForm"]["mechele"].value != "Male" && document.forms["finalForm"]["mechele"].value != "female" && document.forms["finalForm"]["mechele"].value != "Female") {
-        document.getElementById("finalFormErrors").innerHTML = "Please fill out the missing input.";
+        document.getElementById("finalFormErrors").innerHTML = 'Please only enter either "male" or "female" (without the quotes) for the gender question.';
         formValid = false;
     } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
         document.getElementById("finalFormErrors").innerHTML = 'Please correctly answer only "yes" or "no" (no single or double quotes) to the mental competency question.';
@@ -182,16 +182,16 @@ function submitFinalForm() {
     } if (document.forms["finalForm"]["desh"].value != 'US') {
         document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["desh"].value  + " citizens are not eligible to vote in the US.";
         formValid = false;
-    } if (!document.forms["finalForm"]["email"].value.includes("@")) {
+    } if (!document.forms["finalForm"]["cheethee"].value.includes("@")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
-    } if (!document.forms["finalForm"]["email"].value.includes(".com") && !document.forms["finalForm"]["email"].value.includes(".edu") && !document.forms["finalForm"]["email"].value.includes(".io") && !document.forms["finalForm"]["email"].value.includes(".net") && !document.forms["finalForm"]["email"].value.includes(".org")) {
+    } if (!document.forms["finalForm"]["cheethee"].value.includes(".com") && !document.forms["finalForm"]["cheethee"].value.includes(".edu") && !document.forms["finalForm"]["cheethee"].value.includes(".io") && !document.forms["finalForm"]["cheethee"].value.includes(".net") && !document.forms["finalForm"]["cheethee"].value.includes(".org")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
-    } if (isNaN(document.forms["finalForm"]["phone"].value) == true) {
+    } if (isNaN(document.forms["finalForm"]["pon"].value) == true) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter only digits for your phone number.";
         formValid = false;
-    } if (!document.forms["finalForm"]["phone"].value.length == 10) {
+    } if (!document.forms["finalForm"]["pon"].value.length == 10) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter your US phone number.";
         formValid = false;
     }
