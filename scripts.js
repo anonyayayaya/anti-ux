@@ -51,7 +51,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (!document.getElementById("q2t1").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Are you sure credit cards are a valid form of identification?");
         formValid = false;
     }
     if (!document.getElementById("q2t2").checked) {
@@ -79,7 +79,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (document.getElementById("q2f6").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that a valid state driver's license is an acceptable form of identification.");
         formValid = false;
     }
     if (formValid == true) {
