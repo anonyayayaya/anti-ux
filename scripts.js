@@ -82,10 +82,6 @@ function submitFinalQuiz1() {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    if (document.getElementById("q2f7").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that a naturalization certificate is a form of identification issued by the United States.");
-        formValid = false;
-    }
     if (formValid == true) {
         window.location.href = './finalquiz2.html';
     }
