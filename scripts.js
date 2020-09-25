@@ -55,7 +55,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (!document.getElementById("q2t2").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only student IDs from US universities are valid.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only student IDs issued by any institution of higher education located in any state or territory *of the United States* are valid.");
         formValid = false;
     }
     if (document.getElementById("q2f1").checked) {
@@ -150,7 +150,7 @@ function submitFinalQuiz4() {
     let formValid = true;
     if (!(document.getElementById("q1t").checked) && (document.getElementById("q1f").checked)) {
         formValid = false;
-        alert("Sorry, that's not right. Remember that The early voting period does indeed run from Friday, September 18, 2020 to Saturday, October 31, 2020, but hours may vary based on where you live.");
+        alert("Sorry, that's not right. Remember that The early voting period runs from Friday, September 18, 2020 to Saturday, October 31, 2020, but hours may vary based on where you live, and it will not run all day.");
     }
     console.log(document.getElementById("sept18").value == '2020-09-18');
     console.log(document.getElementById("oct31").value == '2020-10-31');
