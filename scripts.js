@@ -55,7 +55,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (!document.getElementById("q2t2").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only IDs from US institutions are valid.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only IDs from US universities are valid.");
         formValid = false;
     }
     if (document.getElementById("q2f1").checked) {
