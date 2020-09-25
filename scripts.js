@@ -100,35 +100,44 @@ function submitFinalQuiz2() {
 
 function submitFinalQuiz3() {
     let formValid = true;
-    if (document.getElementById("sign").value != "sign") {
+    let sign = document.getElementById("sign").value.trim().toLowerCase();
+    let statement = document.getElementById("statement").value.trim().toLowerCase();
+    let registered = document.getElementById("registered").value.trim().toLowerCase();
+    let noon = document.getElementById("noon").value.trim().toLowerCase();
+    let friday = document.getElementById("Friday").value.trim().toLowerCase();
+    let local = document.getElementById("local").value.trim().toLowerCase();
+    let electoral = document.getElementById("electoral").value.trim().toLowerCase();
+    let board = document.getElementById("board").value.trim().toLowerCase();
+
+    if (sign != "sign") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("statement").value != "statement") {
+    if (statement != "statement") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("registered").value != "registered") {
+    if (registered != "registered") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("noon").value != "noon") {
+    if (noon != "noon") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("Friday").value != "Friday") {
+    if (friday != "friday") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("local").value != "local") {
+    if (local != "local") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("electoral").value != "electoral") {
+    if (electoral != "electoral") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (document.getElementById("board").value != "board") {
+    if (board != "board") {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
