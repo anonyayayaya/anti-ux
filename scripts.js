@@ -89,6 +89,9 @@ function submitFinalQuiz1() {
 
 function submitFinalQuiz2() {
     let formValid = true;
+    if (!(document.getElementById("q1t").checked)) {
+        formValid = false;
+    }
     if (!(document.getElementById("q1t").checked) && (document.getElementById("q1f").checked)) {
         formValid = false;
         alert("Sorry, that's not right. If you don't bring your ID, you will be asked to sign a statement that you are the registered voter you claim to be.");
