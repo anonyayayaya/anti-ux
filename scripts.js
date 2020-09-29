@@ -51,7 +51,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (!document.getElementById("q2t1").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Are you sure credit cards are a valid form of identification?");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
     if (!document.getElementById("q2t2").checked) {
@@ -185,7 +185,7 @@ function submitFinalForm() {
     } if (!document.forms["finalForm"]["cheethee"].value.includes("@")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
-    } if (!document.forms["finalForm"]["cheethee"].value.includes(".com") && !document.forms["finalForm"]["cheethee"].value.includes(".edu"))) {
+    } if (!document.forms["finalForm"]["cheethee"].value.includes(".com") && !document.forms["finalForm"]["cheethee"].value.includes(".edu")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
     } if (isNaN(document.forms["finalForm"]["pon"].value) == true) {
