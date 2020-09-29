@@ -22,13 +22,13 @@
                 <h1 class="my-5">Take a Buzzfeed quiz!</h1>
                 <!-- Buzzfeed Links -->
                 <span style="font-size: 20px;">
+                    <span style="color: #007bff;">Or proceed to the next page.</span><br/>
                     <a href="https://www.buzzfeed.com/eliachuaqui/pick-your-favorite-spooky-movies-to-determine-whic-8k23rmru87">Choose Some Horror Movies To Reveal Which Halloween Candy You Are</a><br/>
                     <a href="https://www.buzzfeed.com/songillo/which-disney-character-is-the-worst-fnrqnlhkbm">Which Disney Character Is The Worst?</a><br/>
                     <a href="https://www.buzzfeed.com/hermione08/can-you-identify-these-pixelated-hunger-games-char-473zdda3c8">Honestly, If You Can Identify These "Hunger Games" Characters From A Pixelated Image, Then You've Watched The Movies Too Many Times</a><br/>
                     <a href="https://www.buzzfeed.com/laurengarafano/a-to-z-tv-quiz-reveals-generation">Pick A TV Show For Every Letter Of The Alphabet And We'll Guess Your Generation Perfectly</a><br/>
                     <a href="https://www.buzzfeed.com/xxamysxx/design-a-princess-and-find-out-which-disney-prince-fp78jm1ojk">Design A Princess To Find Out Which Disney Princess You Are</a><br/>
                     <a href="https://www.buzzfeed.com/angrylauren/what-kind-of-cake-are-you-7kb6nvojx3">Ever Wondered What Kind Of Cake Matches Your Personality? Take This Quiz To Find Out</a><br/>
-                    <span style="color: #007bff;">Or select the next button to proceed.</span><br/>
                     <a href="https://www.buzzfeed.com/spenceralthouse/these-celebrities-always-get-mistaken-for-others?origin=shp">These 17 Famous People Always Get Mistaken For Other Celebs – Can You Tell Them Apart?</a><br/>
                     <a href="https://www.buzzfeed.com/sydrobinson1/spelling-picture-quiz">2/3 Of People Can't Match These Pictures To Their Correct Spellings — Can You?</a><br/>
                     <a href="https://www.buzzfeed.com/nkfernandez/make-a-playlist-of-your-fav-dcom-songs-and-find-ou-eg7s37vv5s">This DCOM Song Quiz Will Reveal Who You Really Are In Your Friend Group</a><br/>
@@ -46,8 +46,12 @@
         </div>
     </div>
     <!-- Nav Buttons -->
-    <button type="button" class="btn btn-light" onclick="buzzfeedredirect('next')">></button>
-    <button type="button" class="btn btn-light" onclick="buzzfeedredirect('back')"><</button>
+    <button type="button" class="btn btn-lg btn-light" style="position: fixed; bottom: 10px;" onclick="buzzfeedredirect('next')">
+        <span style="font-size: smaller;">></span>
+    </button>
+    <button type="button" class="btn btn-lg btn-light" style="position: fixed;  bottom: 10px; right: 0;" onclick="buzzfeedredirect('back')">
+      <span style="font-size: smaller;"><</span>
+    </button>
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

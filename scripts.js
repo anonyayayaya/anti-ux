@@ -4,13 +4,13 @@ var precinct_avail;
 
 function checkRegistrationCode() {
     var registrationcode = document.getElementById("registrationCodeInput").value;
-    if (registrationcode == '19kjjna*&D389jsl09AFJ4%^olr2w43o9ia')
+    if (registrationcode == 'jsl09AFJ4%^olr')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode == '19kjjna*&D389jsI09AFJ4%^oIr2w43o9ia')
+    else if (registrationcode == 'jsI09AFJ4%^oIr')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode == '19kjjna*&D389jsI09AFJ4%^olr2w43o9ia')
+    else if (registrationcode == 'jsI09AFJ4%^olr')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode != '19kjjna*&D389jsl09AFJ4%^oIr2w43o9ia')
+    else if (registrationcode != 'jsl09AFJ4%^oIr')
         document.write("Oops, that's not a valid registration code. Please try again");
     else
         window.location.href = './choosefavactivity.html';
@@ -55,7 +55,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (!document.getElementById("q2t2").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only student IDs issued by any institution of higher education located in any state or territory *of the United States* are valid.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only student IDs issued by any institution of higher education located in any state or territory of the United States are valid.");
         formValid = false;
     }
     if (document.getElementById("q2f1").checked) {
@@ -97,6 +97,7 @@ function submitFinalQuiz2() {
         alert("Sorry, that's not right. If you don't bring your ID, you will be asked to sign a statement that you are the registered voter you claim to be.");
     }
     if (formValid == true) {
+        alert("That's right! If you don't bring your ID, you will be asked to sign a statement that you are the registered voter you claim to be.");
         window.location.href = './finalquiz3.html';
     }
 }
@@ -108,9 +109,6 @@ function submitFinalQuiz3() {
     let registered = document.getElementById("registered").value.trim().toLowerCase();
     let noon = document.getElementById("noon").value.trim().toLowerCase();
     let friday = document.getElementById("Friday").value.trim().toLowerCase();
-    let local = document.getElementById("local").value.trim().toLowerCase();
-    let electoral = document.getElementById("electoral").value.trim().toLowerCase();
-    let board = document.getElementById("board").value.trim().toLowerCase();
 
     if (sign != "sign") {
         formValid = false;
@@ -132,18 +130,6 @@ function submitFinalQuiz3() {
         formValid = false;
         alert("Please fill out the fields accurately and exactly.");
     }
-    if (local != "local") {
-        formValid = false;
-        alert("Please fill out the fields accurately and exactly.");
-    }
-    if (electoral != "electoral") {
-        formValid = false;
-        alert("Please fill out the fields accurately and exactly.");
-    }
-    if (board != "board") {
-        formValid = false;
-        alert("Please fill out the fields accurately and exactly.");
-    }
     if (formValid == true) {
         window.location.href = './finalquiz4.html';
     }
@@ -151,15 +137,14 @@ function submitFinalQuiz3() {
 
 function submitFinalQuiz4() {
     let formValid = true;
-    if (!(document.getElementById("q1t").checked)) {
+    if (!(document.getElementById("sept18").value == '2020-09-18')) {
         formValid = false;
+        alert("Sorry, that's not right.");
     }
-    if (!(document.getElementById("q1t").checked) && (document.getElementById("q1f").checked)) {
+    if (!(document.getElementById("oct31").value == '2020-10-31')) {
         formValid = false;
-        alert("Sorry, that's not right. Remember that The early voting period runs from Friday, September 18, 2020 to Saturday, October 31, 2020, but hours may vary based on where you live. It will not run all day.");
+        alert("Sorry, that's not right.");
     }
-    console.log(document.getElementById("sept18").value == '2020-09-18');
-    console.log(document.getElementById("oct31").value == '2020-10-31');
     if (formValid == true) {
         window.location.href = './done.html';
     }
