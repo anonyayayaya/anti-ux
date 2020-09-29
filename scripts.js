@@ -185,7 +185,7 @@ function submitFinalForm() {
     } if (!document.forms["finalForm"]["cheethee"].value.includes("@")) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
-    } if (!document.forms["finalForm"]["cheethee"].value.includes(".com") && !document.forms["finalForm"]["cheethee"].value.includes(".edu") && !document.forms["finalForm"]["cheethee"].value.includes(".io") && !document.forms["finalForm"]["cheethee"].value.includes(".net") && !document.forms["finalForm"]["cheethee"].value.includes(".org")) {
+    } if (!document.forms["finalForm"]["cheethee"].value.includes(".com") && !document.forms["finalForm"]["cheethee"].value.includes(".edu"))) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter a valid email.";
         formValid = false;
     } if (isNaN(document.forms["finalForm"]["pon"].value) == true) {
