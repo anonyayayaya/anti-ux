@@ -1,0 +1,252 @@
+<!-- FORM PG 1 -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<title>Hello, world!</title>
+		<style>
+			.form-background {
+				background-color: #f5f5f5;
+				border-radius: 25px;
+				padding: 50px;
+				margin-bottom: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="px-3 pb-3" style="background-color: black;">
+			<img src="img/commonhelp_logo.png">
+			<div class="mt-5 float-right d-inline-block" style="color: white;">
+				<a href="#" class="p-3 my-auto" style="color: white;">Habla español</a>
+				<a href="#" class="p-3 my-auto" style="color: white;">Help</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="progress mt-4 mb-5">
+				<!-- Progress bar: change "width: 33%" if on the fourth page. There are 9 pages, so they're multiples of 11 -->
+				<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">0%</div>
+			</div>
+			<div class="form-background">
+				<!-- Heading -->
+				<h2 class="mb-5">Family</h2>
+				
+				<form class="my-5" method="post" onsubmit="return validateForm(event)">
+					<!-- Subheading -->
+					<h4>You</h4>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">First name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" placeholder="First name" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Last name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" placeholder="Last name" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Age</label>
+						<div class="col-sm-10">
+							<input type="number" min="0"class="form-control w-25" placeholder="Age" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Gender</label>
+						<div class="form-check ml-3">
+							<input class="form-check-input" type="radio" name="gender" value="male" required>
+							<label class="form-check-label" for="exampleRadios1">
+							  	Male
+							</label>
+						</div>
+						<br>
+						<div class="form-check ml-5">
+							<input class="form-check-input" type="radio" name="gender" value="female" required>
+							<label class="form-check-label" for="exampleRadios2">
+							  	Female
+							</label>
+						</div>
+					</div>
+					<!-- Subheading -->
+					<h4 class="mt-5">Other Members</h4>
+					<div class="form-group">
+						<label>How many people live in your home?
+							<i>Be sure to count yourself.</i>
+						</label>
+						<input type="number" min="0"class="form-control w-25">
+					</div>
+					<div class="form-group">
+						<label>Of those people, how many are under 19 years old?
+							<i>Be sure to count yourself.</i>
+						</label>
+						<input type="number" min="0"class="form-control w-25">
+					</div>
+					<div class="form-group">
+						<label>Where do you live?</label>
+						<select class="custom-select">
+							<option value="001" title="Accomack County" selected>Accomack County</option>
+							<option value="003" title="Albemarle County">Albemarle County</option>
+							<option value="510" title="Alexandria City">Alexandria City</option>
+							<option value="005" title="Alleghany County">Alleghany County</option>
+							<option value="007" title="Amelia County">Amelia County</option>
+							<option value="009" title="Amherst County">Amherst County</option>
+							<option value="011" title="Appomattox County">Appomattox County</option>
+							<option value="013" title="Arlington County">Arlington County</option>
+							<option value="015" title="Augusta County">Augusta County</option>
+							<option value="017" title="Bath County">Bath County</option>
+							<option value="019" title="Bedford County">Bedford County</option>
+							<option value="021" title="Bland County">Bland County</option>
+							<option value="023" title="Botetourt County">Botetourt County</option>
+							<option value="520" title="Bristol City">Bristol City</option>
+							<option value="025" title="Brunswick County">Brunswick County</option>
+							<option value="027" title="Buchanan County">Buchanan County</option>
+							<option value="029" title="Buckingham County">Buckingham County</option>
+							<option value="530" title="Buena Vista City">Buena Vista City</option>
+							<option value="031" title="Campbell County">Campbell County</option>
+							<option value="033" title="Caroline County">Caroline County</option>
+							<option value="035" title="Carroll County">Carroll County</option>
+							<option value="036" title="Charles City County">Charles City County</option>
+							<option value="037" title="Charlotte County">Charlotte County</option>
+							<option value="540" title="Charlottesville City">Charlottesville City</option>
+							<option value="550" title="Chesapeake City">Chesapeake City</option>
+							<option value="041" title="Chesterfield County">Chesterfield County</option>
+							<option value="043" title="Clarke County">Clarke County</option>
+							<option value="570" title="Colonial Heights City">Colonial Heights City</option>
+							<option value="580" title="Covington City">Covington City</option>
+							<option value="045" title="Craig County">Craig County</option>
+							<option value="047" title="Culpeper County">Culpeper County</option>
+							<option value="049" title="Cumberland County">Cumberland County</option>
+							<option value="590" title="Danville City">Danville City</option>
+							<option value="051" title="Dickenson County">Dickenson County</option>
+							<option value="053" title="Dinwiddie County">Dinwiddie County</option>
+							<option value="595" title="Emporia City">Emporia City</option>
+							<option value="057" title="Essex County">Essex County</option>
+							<option value="600" title="Fairfax City">Fairfax City</option>
+							<option value="059" title="Fairfax County">Fairfax County</option>
+							<option value="610" title="Falls Church City">Falls Church City</option>
+							<option value="061" title="Fauquier County">Fauquier County</option>
+							<option value="063" title="Floyd County">Floyd County</option>
+							<option value="065" title="Fluvanna County">Fluvanna County</option>
+							<option value="620" title="Franklin City">Franklin City</option>
+							<option value="067" title="Franklin County">Franklin County</option>
+							<option value="069" title="Frederick County">Frederick County</option>
+							<option value="630" title="Fredericksburg City">Fredericksburg City</option>
+							<option value="640" title="Galax City">Galax City</option>
+							<option value="071" title="Giles County">Giles County</option>
+							<option value="073" title="Gloucester County">Gloucester County</option>
+							<option value="075" title="Goochland County">Goochland County</option>
+							<option value="077" title="Grayson County">Grayson County</option>
+							<option value="079" title="Greene County">Greene County</option>
+							<option value="081" title="Greensville County">Greensville County</option>
+							<option value="083" title="Halifax County">Halifax County</option>
+							<option value="650" title="Hampton City">Hampton City</option>
+							<option value="085" title="Hanover County">Hanover County</option>
+							<option value="660" title="Harrisonburg City">Harrisonburg City</option>
+							<option value="087" title="Henrico County">Henrico County</option>
+							<option value="089" title="Henry County">Henry County</option>
+							<option value="091" title="Highland County">Highland County</option>
+							<option value="670" title="Hopewell City">Hopewell City</option>
+							<option value="093" title="Isle of Wight County">Isle of Wight County</option>
+							<option value="095" title="James City County">James City County</option>
+							<option value="097" title="King and Queen County">King and Queen County</option>
+							<option value="099" title="King George County">King George County</option>
+							<option value="101" title="King William County">King William County</option>
+							<option value="103" title="Lancaster County">Lancaster County</option>
+							<option value="105" title="Lee County">Lee County</option>
+							<option value="678" title="Lexington City">Lexington City</option>
+							<option value="107" title="Loudoun County">Loudoun County</option>
+							<option value="109" title="Louisa County">Louisa County</option>
+							<option value="111" title="Lunenburg County">Lunenburg County</option>
+							<option value="680" title="Lynchburg City">Lynchburg City</option>
+							<option value="113" title="Madison County">Madison County</option>
+							<option value="683" title="Manassas City">Manassas City</option>
+							<option value="685" title="Manassas Park City">Manassas Park City</option>
+							<option value="690" title="Martinsville City">Martinsville City</option>
+							<option value="115" title="Mathews County">Mathews County</option>
+							<option value="117" title="Mecklenburg County">Mecklenburg County</option>
+							<option value="119" title="Middlesex County">Middlesex County</option>
+							<option value="121" title="Montgomery County">Montgomery County</option>
+							<option value="125" title="Nelson County">Nelson County</option>
+							<option value="127" title="New Kent County">New Kent County</option>
+							<option value="700" title="Newport News City">Newport News City</option>
+							<option value="710" title="Norfolk City">Norfolk City</option>
+							<option value="131" title="Northampton County">Northampton County</option>
+							<option value="133" title="Northumberland County">Northumberland County</option>
+							<option value="720" title="Norton City">Norton City</option>
+							<option value="135" title="Nottoway County">Nottoway County</option>
+							<option value="137" title="Orange County">Orange County</option>
+							<option value="139" title="Page County">Page County</option>
+							<option value="141" title="Patrick County">Patrick County</option>
+							<option value="730" title="Petersburg City">Petersburg City</option>
+							<option value="143" title="Pittsylvania County">Pittsylvania County</option>
+							<option value="735" title="Poquoson City">Poquoson City</option>
+							<option value="740" title="Portsmouth City">Portsmouth City</option>
+							<option value="145" title="Powhatan County">Powhatan County</option>
+							<option value="147" title="Prince Edward County">Prince Edward County</option>
+							<option value="149" title="Prince George County">Prince George County</option>
+							<option value="153" title="Prince William County">Prince William County</option>
+							<option value="155" title="Pulaski County">Pulaski County</option>
+							<option value="750" title="Radford City">Radford City</option>
+							<option value="157" title="Rappahannock County">Rappahannock County</option>
+							<option value="760" title="Richmond City">Richmond City</option>
+							<option value="159" title="Richmond County">Richmond County</option>
+							<option value="770" title="Roanoke City">Roanoke City</option>
+							<option value="161" title="Roanoke County">Roanoke County</option>
+							<option value="163" title="Rockbridge County">Rockbridge County</option>
+							<option value="165" title="Rockingham County">Rockingham County</option>
+							<option value="167" title="Russell County">Russell County</option>
+							<option value="169" title="Scott County">Scott County</option>
+							<option value="171" title="Shenandoah County">Shenandoah County</option>
+							<option value="173" title="Smyth County">Smyth County</option>
+							<option value="175" title="Southampton County">Southampton County</option>
+							<option value="177" title="Spotsylvania County">Spotsylvania County</option>
+							<option value="179" title="Stafford County">Stafford County</option>
+							<option value="790" title="Staunton City">Staunton City</option>
+							<option value="800" title="Suffolk City">Suffolk City</option>
+							<option value="181" title="Surry County">Surry County</option>
+							<option value="183" title="Sussex County">Sussex County</option>
+							<option value="185" title="Tazewell County">Tazewell County</option>
+							<option value="810" title="Virginia Beach City">Virginia Beach City</option>
+							<option value="187" title="Warren County">Warren County</option>
+							<option value="191" title="Washington County">Washington County</option>
+							<option value="820" title="Waynesboro City">Waynesboro City</option>
+							<option value="193" title="Westmoreland County">Westmoreland County</option>
+							<option value="830" title="Williamsburg City">Williamsburg City</option>
+							<option value="840" title="Winchester City">Winchester City</option>
+							<option value="195" title="Wise County">Wise County</option>
+							<option value="197" title="Wythe County">Wythe County</option>
+							<option value="199" title="York County">York County</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>How many people were on your federal income tax return this year? Select 0 if you not file a federal income tax return.</label>
+						<input type="number" min="0"class="form-control w-25" required>
+					</div>
+					<div class="pt-5">
+						<button type="submit" class="btn btn-lg btn-primary float-right">Next</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script>
+			function validateForm(event) {
+				event.preventDefault();
+				console.log("hi");
+				window.location.href='form2.html';
+			}
+		</script>
+	</body>
+</html>
