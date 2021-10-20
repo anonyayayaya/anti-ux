@@ -14,6 +14,7 @@ function checkRegistrationCode() {
         document.write("Oops, that's not a valid registration code. Please try again");
     else
         window.location.href = './choosefavactivity.html';
+        // answer: 9jsl09AFJ4%^oIr2
 }
 function buzzfeedredirect(direction) {
     if (direction == 'next')
