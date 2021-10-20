@@ -54,8 +54,8 @@ function submitFinalQuiz1() {
         alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
-    if (!document.getElementById("q2t2").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that only student IDs issued by any institution of higher education located in any state or territory of the United States are valid.");
+    if (document.getElementById("q2t2").checked) {
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete.");
         formValid = false;
     }
     if (document.getElementById("q2f1").checked) {
@@ -79,7 +79,7 @@ function submitFinalQuiz1() {
         formValid = false;
     }
     if (document.getElementById("q2f6").checked) {
-        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that a valid state driver's license is an acceptable form of identification.");
+        alert("Sorry, that's not right. Please select the right answers according to the information provided in the previous page. You must show that you're well informed to vote before registration is complete. Remember that an expired state driver's license is valid and an acceptable form of identification.");
         formValid = false;
     }
     if (formValid == true) {
@@ -173,8 +173,11 @@ function submitFinalForm() {
     } if (document.forms["finalForm"]["mechele"].value != "male" && document.forms["finalForm"]["mechele"].value != "Male" && document.forms["finalForm"]["mechele"].value != "female" && document.forms["finalForm"]["mechele"].value != "Female") {
         document.getElementById("finalFormErrors").innerHTML = 'Please only enter either "male" or "female" (without the quotes) for the gender question.';
         formValid = false;
-    } if (document.forms["finalForm"]["mentally_incompetent"].value != "no" && document.forms["finalForm"]["mentally_incompetent"].value != "No") {
-        document.getElementById("finalFormErrors").innerHTML = 'Please correctly answer only "yes" or "no" (no single or double quotes) to the mental competency question.';
+    } if (document.forms["finalForm"]["mentally_incompetent"].value != "Yes" && 
+        document.forms["finalForm"]["mentally_incompetent"].value != "No" && 
+        document.forms["finalForm"]["mentally_incompetent"].value != "yes" &&
+        document.forms["finalForm"]["mentally_incompetent"].value != "no") {
+        document.getElementById("finalFormErrors").innerHTML = 'Please correctly answer only yes or no to the mental competency question.';
         formValid = false;
     } if (document.forms["finalForm"]["etats"].value != "VA") {
         document.getElementById("finalFormErrors").innerHTML = "Sorry, " + document.forms["finalForm"]["etats"].value + " citizens are not eligible to vote in the Virginia primaries.";
@@ -191,13 +194,13 @@ function submitFinalForm() {
     } if (isNaN(document.forms["finalForm"]["pon"].value) == true) {
         document.getElementById("finalFormErrors").innerHTML = "Please enter only digits for your phone number.";
         formValid = false;
-    } if (!document.forms["finalForm"]["pon"].value.length == 10) {
-        document.getElementById("finalFormErrors").innerHTML = "Please enter your US phone number.";
+    } if (document.forms["finalForm"]["pon"].value.length < 7) {
+        document.getElementById("finalFormErrors").innerHTML = "Please enter your phone number.";
         formValid = false;
     }
 
     if (formValid) {
-        window.location.href = './details.html';
+        window.location.href = './votingdetails.html';
     }
 
 }
