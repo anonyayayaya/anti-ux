@@ -4,17 +4,16 @@ var precinct_avail;
 
 function checkRegistrationCode() {
     var registrationcode = document.getElementById("registrationCodeInput").value;
-    if (registrationcode == '9jsl09AFJ4%^olr2')
+    if (registrationcode == 'sl09%^lr')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode == '9jsI09AFJ4%^oIr2')
+    else if (registrationcode == 'sI09%^Ir')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode == '9jsI09AFJ4%^olr2')
+    else if (registrationcode == 'sl09%^Ir')
         document.write("Oops, that's not a valid registration code. Please try again and make sure you can differentiate your capital i's and lowercase l's.");
-    else if (registrationcode != '9jsl09AFJ4%^oIr2')
+    else if (registrationcode != 'sI09%^lr') // ANSWER
         document.write("Oops, that's not a valid registration code. Please try again");
     else
         window.location.href = './choosefavactivity.html';
-        // answer: 9jsl09AFJ4%^oIr2
 }
 function buzzfeedredirect(direction) {
     if (direction == 'next')
